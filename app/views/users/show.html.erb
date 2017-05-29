@@ -1,0 +1,12 @@
+<% if logged_in? %>
+<%= current_user.first_name %>
+<%= current_user.last_name %>
+<%= current_user.email %>
+<%= current_user.user_name %>
+<%#= current_user.first_name %>
+<%#= current_user.first_name %>
+<%= link_to "logout", logout_path, method: :delete %>
+<%else%>
+<h1> must login first </h1>
+<%= link_to "login", login_path%>
+<%end%>
