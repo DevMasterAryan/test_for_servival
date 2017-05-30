@@ -1,14 +1,1 @@
-
-<%= form_for(:session, url: sessions_new_path) do|f| %>
-  <p>
-    <%= f.label :login, "Username" %><br />
-    <%= f.text_field :user_name%>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p><%= f.submit "Log in" %>
-  <%= link_to "forgot password"%></p>
-<% end %>
-<p> New user?<%= link_to "sign up", signup_path%>
+<%= render 'signform' %>

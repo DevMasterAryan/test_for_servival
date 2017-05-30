@@ -8,5 +8,6 @@
 <%= link_to "logout", logout_path, method: :delete %>
 <%else%>
 <h1> must login first </h1>
-<%= link_to "login", login_path%>
+<%#= link_to "login", login_path%>
+<%= render 'sessions/signform'%>
 <%end%>
