@@ -1,8 +1,29 @@
 <% if logged_in? %>
 <%= current_user.first_name %>
 <%= current_user.last_name %>
-<%= current_user.email %>
+<%#= current_user.email %>
 <%= current_user.user_name %>
+<h2>Friends</h2>
+<ul>
+  <% for friendship in @user.friendships %>
+    <li>
+      <%=h friendship.friend.user_name %>
+      (<%= link_to "remove", friendship, :method => :delete %>)
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Find Friends", users_path %></p>
+
+<h2>Friended by Users</h2>
+<ul>
+  <% for user in @user.inverse_friends %>
+    <li><%=h user.username %></li>
+  <% end %>
+</ul>
+
+
+
 <%#= current_user.first_name %>
 <%#= current_user.first_name %>
 <%= link_to "logout", logout_path, method: :delete %>
