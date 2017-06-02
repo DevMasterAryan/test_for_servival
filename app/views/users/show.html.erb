@@ -18,7 +18,7 @@
 <h2>Friended by Users</h2>
 <ul>
   <% for user in @user.inverse_friends %>
-    <li><%=h user.username %></li>
+    <li><%=user.user_name %></li>
   <% end %>
 </ul>
 
