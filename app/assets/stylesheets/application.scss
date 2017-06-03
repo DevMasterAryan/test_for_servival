@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+.notice , .danger {
+    positon: absolute;
+    background: rgba(135,210,211,0.85);
+    width: 100%;
+    text-align: center;
+    top: 0;
+    z-index: 999;
+}

@@ -1,0 +1,7 @@
+<%=form_tag(reset_password_new_path, method: :post) do%>
+<%=label_tag :email, "Registered Email:"%><br/>
+<%=text_field_tag :email, nil, :autocomplete=> :off%><br/>
+<%=label_tag :security_answer, "what is your home town:"%><br/>
+<%=text_field_tag :security_answer, nil, :autocomplete=> :off%><br/>
+<%= submit_tag "submit"%>
+<%end%>

@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+  get 'reset_password/new', to: "reset_password#new"
+
+  post 'reset_password/new', to: "reset_password#create"
+
+ 
+
   get 'sessions/new'
 
   root 'users#signup'
   resources :users
   resources :friendships
   resources :sessions
+  resources :reset_password
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

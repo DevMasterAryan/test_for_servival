@@ -1,0 +1,8 @@
+<h1>ResetPassword</h1>
+<%=form_tag(reset_password_path, method: :PUT) do%>
+<%= label_tag :password, "enter new password"%><br/>
+<%= password_field_tag :password%><br/>
+<%= label_tag :confirm_password, "confirm password"%><br/>
+<%= password_field_tag :password_confirmation%><br/>
+<%=submit_tag "submit"%>
+<%end%>

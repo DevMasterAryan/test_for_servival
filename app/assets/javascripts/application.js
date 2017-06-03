@@ -13,3 +13,10 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+	setTimeOut(function(){
+		$('#notice_wrapper').fadeOut("slow", function(){
+			$(this).remove();
+		})
+	},4500);
+});

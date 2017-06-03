@@ -5,10 +5,23 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application'%>
   </head>
 
   <body>
+  <%flash.each do|value,msg|%>
+  <div id ='notice_wrapper'>
+    <%#if flash[:sucess]%>
+
+    <!-- <p class="notice"><%#=flash[:sucess]%></p> -->
+    <%#end%>
+    <%#elsif flash[:danger]%>
+    <!-- <p class= "danger"><%#=flash[:danger]%></p> -->
+    <%#end%>
+    <div class='notice danger'><%=msg%></div> 
+</div>
+  <%end%>
+
   
     <%= yield %>
   </body>

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   		
   		log_in user
   		flash[:success] = "login success"
-  		redirect_to user_path(current_user)
+  		redirect_to user_path(current_user), sucess: "login success" 
   	   
   	else
   		flash[:danger]  = "invalid user or password..retry again...!!!"

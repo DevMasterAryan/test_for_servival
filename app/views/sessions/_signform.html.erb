@@ -9,6 +9,6 @@
     <%= f.password_field :password %>
   </p>
   <p><%= f.submit "Log in" %>
-  <%= link_to "forgot password"%></p>
+  <%= link_to "forgot password", reset_password_new_path%></p>
 <% end %>
 <p> New user?<%= link_to "sign up", signup_path%>
