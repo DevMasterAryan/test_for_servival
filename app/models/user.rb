@@ -24,7 +24,7 @@ class User < ApplicationRecord
                                                                foreign_key: :friend_id
   has_many :inverse_friends, through: :inverse_friendships, source: :user
   
-  validates :user_name, :first_name, :last_name, :email, :password, presence: :true
+  validates :user_name, :first_name, :last_name, :email, :password, presence: :true ,:on => :create
   validates :email, :user_name, uniqueness: :true
 
 

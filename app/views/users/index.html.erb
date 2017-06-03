@@ -4,7 +4,7 @@
 <% for user in @users %>
   <div class="user">
     <p>
-      <strong><%=h user.user_name %></strong>
+      <strong><%=user.user_name %></strong>
       <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
       <div class="clear"></div>
     </p>
