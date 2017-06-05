@@ -1,0 +1,10 @@
+<%= @user.first_name %>'s Friends
+  <% if @friendships.any? %>
+    <% @friendships.each do |friend| %>
+      <%= link_to friend.full_name, user_path(friend) %>
+      
+   <% end %>
+ <% else %>
+       No content.
+<% end %>
+  
